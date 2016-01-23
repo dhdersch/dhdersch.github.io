@@ -4,7 +4,7 @@ title:  "GoLang: When to use string pointers"
 date:   2016-01-23 11:00:00
 categories: golang
 comments: true
-identifier: dd2
+uid: dd2
 tags: 
   - go 
   - golang 
