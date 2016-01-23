@@ -3,6 +3,13 @@ layout: post
 title:  "GoLang: When to use string pointers"
 date:   2016-01-23 11:00:00
 categories: golang
+comments: true
+tags: 
+  - go 
+  - golang 
+  - string 
+  - "*string" 
+  - pointer
 ---
 
 A string in Go is a value. Thus, a string cannot be `nil`. 

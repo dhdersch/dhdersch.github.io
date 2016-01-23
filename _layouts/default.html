@@ -11,10 +11,24 @@
       <div class="wrapper">
         {{ content }}
       </div>
+
+      <div class="wrapper">
+      {% include comments.html %}
+      </div>
+
     </div>
+
+    
+    
 
     {% include footer.html %}
 
   </body>
+
+  <script >
+  var host = "dhdersch.github.io";
+  if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https";
+  </script>
 
 </html>

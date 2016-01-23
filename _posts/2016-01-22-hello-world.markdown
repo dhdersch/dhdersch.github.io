@@ -3,6 +3,7 @@ layout: post
 title:  "Hello world"
 date:   2016-01-22 21:32:06
 categories:
+comments: true
 ---
 Thank you for reading my initial post. This is my first time creating 
 a webpage using Jekyll, so this post will primarily serve to test some of its features.
