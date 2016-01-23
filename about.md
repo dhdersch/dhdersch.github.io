@@ -4,8 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I am a Software Engineer that recently discovered [Go](https://golang.org/) after a couple of years in the C# .NET world. I also dabble with Bash, Python, JavaScript, and Ruby. I write about interesting things along the way. I am also currently a part-time Computer Science graduate student at [Georgia Institute of Technology](http://www.omscs.gatech.edu/).
