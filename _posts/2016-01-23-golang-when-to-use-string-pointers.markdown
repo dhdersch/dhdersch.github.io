@@ -39,7 +39,7 @@ A good rule of thumb is to use normal strings unless you **need** `nil`. Normal 
 
 func UseString(s *string) error {
     if s == nil {
-        temp = "" // *string cannot be initialized
+        temp := "" // *string cannot be initialized
         s = &temp // in one statement
     }
     value := *s // safe to dereference the *string
