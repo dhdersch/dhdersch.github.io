@@ -4,6 +4,7 @@ title:  "Hello world"
 date:   2016-01-22 21:32:06
 categories:
 uid: dd1
+ads: true
 comments: true
 ---
 Thank you for reading my initial post. This is my first time creating 
