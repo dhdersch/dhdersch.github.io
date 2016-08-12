@@ -24,7 +24,7 @@ Previously, the casing in this header didn't matter. `x-api-key`, `X-Api-Key`, a
 However, after the recent changes, API Gateway seems to only accept `x-api-key`.
 
 This is especially frustrating for applications using Go's `http.Client` which is part of the Go standard libary `net/http`.
-The following code snippet can be used to add a header to a request:
+The following code snippet can be used to add the `x-api-key` header to a request:
 
 
 {% highlight go %}
@@ -38,9 +38,8 @@ response, _ := client.Do(request)
 
 However, `request.Header.Set(...)` ends up calling [CanonicalMIMEHeaderKey](https://github.com/golang/go/blob/master/src/net/textproto/reader.go#L554) 
 on the header key, in this case `"x-api-key"`.
-This converts `"x-api-key"` to `"X-Api-Key"`.
-
-Note that `request.Header.Add("x-api-key", "somelongapikey2349208759283")` does the same thing.
+This converts `"x-api-key"` to `"X-Api-Key"`. Note that `request.Header.Add("x-api-key", "somelongapikey2349208759283")` does the same thing. 
+While this is good behavior on Go's part, we need this header to be all lowercase.
 
 So how can we set a header to be all lowercase? It turns out that `request.Header` is an alias of the type `map[string][]string`.
 Thus, we can set the header key as lowercase (or whatever we want) with the following code:
