@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GoLang: Case-sensitive HTTP Headers with net/http"
-date:   2016-08-11 11:00:00
+date:   2016-01-23 11:00:00
 categories: golang
 comments: true
 ads: false
