@@ -54,7 +54,7 @@ response, _ := client.Do(request)
 {% endhighlight %}
 
 
-**tl;dr;** AWS released a backwards-incompatible change to an API that requires a lowercase HTTP header. The Go Standard Library converts headers to canonical format. Read the whole thing for the workaround.
+**tl;dr;** AWS released a backwards-incompatible change to an API that requires a lowercase HTTP header. The Go Standard Library converts headers to canonical format.
 
 
-**UPDATE:** *Reddit user [mwholt](https://www.reddit.com/user/mwholt) pointed out that this might have to do with [HTTP/2 requiring lowercase header fields](http://httpwg.org/specs/rfc7540.html#HttpHeaders).*
+**UPDATE:** *Reddit user [/u/mwholt](https://www.reddit.com/user/mwholt) pointed out that this might have to do with [HTTP/2 requiring lowercase header fields](http://httpwg.org/specs/rfc7540.html#HttpHeaders).*
