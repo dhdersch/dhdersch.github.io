@@ -55,6 +55,6 @@ response, _ := client.Do(request)
 {% endhighlight %}
 
 
-*tl;dr; AWS released a backwards-incompatible change to their API. The Go Standard Library converts headers to canonical format.*
+*tl;dr; AWS released a backwards-incompatible change to an API that requires a lowercase HTTP header. The Go Standard Library converts headers to canonical format. Read the whole thing for the workaround.*
 
 
