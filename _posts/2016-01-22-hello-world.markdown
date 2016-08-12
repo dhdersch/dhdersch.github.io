@@ -6,6 +6,8 @@ categories:
 uid: dd2
 ads: false
 comments: true
+tags:
+- "hello world"
 ---
 Thank you for reading my initial post. This is my first time creating 
 a webpage using Jekyll, so this post will primarily serve to test some of its features.
