@@ -167,4 +167,6 @@ Notice that with `*string`, you can now differentiate between a missing property
 
 *tl;dr; Only use a string pointer `*string` if you need `nil`. Otherwise, use a normal string*
 
+If you benefited from this post, please consider [subscribing to my newsletter](https://sheepcode.substack.com/)!
+
 
