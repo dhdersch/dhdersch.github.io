@@ -3,7 +3,7 @@ layout: post
 title:  "Hello world"
 date:   2016-01-22 21:32:06
 categories:
-uid: dd2
+uid: dd1
 ads: false
 comments: true
 tags:
