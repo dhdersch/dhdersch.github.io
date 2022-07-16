@@ -219,4 +219,4 @@ func (stack *Stack) IsEmpty() bool {
 
 {% endhighlight %}
 
-I hope you enjoyed reading!
+If you learned anything from this post or enjoyed it, I hope you will subscribe to my [Substack newsletter Sheep Code](https://sheepcode.substack.com)!
