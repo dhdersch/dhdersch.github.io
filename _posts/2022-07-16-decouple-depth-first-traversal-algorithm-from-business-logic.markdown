@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GoLang: Decouple Depth First Tree Traversal from Business Logic"
-date:   2022-07-16 21:32:06
+date:   2022-07-16 11:00:00
 categories: golang
 uid: dd4
 ads: false
@@ -11,10 +11,6 @@ tags:
 - "golang"
 - "programming"
 - "decoupling"
-- "dfs"
-- "dft"
-- "algorithm"
-- "interview"
 ---
 
 If you have been in this industry for any amount of
