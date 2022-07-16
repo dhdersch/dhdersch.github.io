@@ -80,7 +80,8 @@ func depthFirstTreeTraversalCoupled(root *Node) int {
   stack := &Stack{}
   stack.Push(root)
 
-  sum := 0
+  sum := 0 // have to initialize this before the loop
+  // for scoping reasons!
 
   for !stack.IsEmpty(){
     node := stack.Pop()
@@ -100,11 +101,11 @@ func depthFirstTreeTraversalCoupled(root *Node) int {
 
 {% endhighlight %}
 
-Great, so we've returned the `sum`! Actually, not so great. For one, the name `depthFirstTreeTraversalCoupled` no longer makes sense. It would be better named `sumTreeValues`. We can rename it to that, but what if our codebase still needs the original function? We would need to have two functions with very similar algorithms doing very different things.
+Great, so we've returned the `sum`! Actually, not so great. For one, the name `depthFirstTreeTraversalCoupled` no longer makes sense. It would be better named `sumTreeValues`. We can rename it to that, but what if our codebase still needs the original function? We would need to have two functions implementing an identical algorithm to accomplish completely different things.
 
-So let's fix this by decoupling the depth first tree traversal algorithm from the business logic. In this case, the business logic is either printing the values or summing the values.
+So let's fix this by decoupling the depth first tree traversal algorithm from the business logic. In this case, the business logic is either **printing the values** or **summing the values**.
 
-What we will do is instead of baking the business logic directly into the function, we will pass it in as a function parameter. 
+Instead of baking the business logic directly into the algorithm function, we will pass it in as a function parameter named `businessLogic`. 
 
 {% highlight go %}
 
@@ -180,9 +181,9 @@ func sumAllTreeValues(tree *Node) int {
 
 So why was all of this helpful? Because it allows us to write the `depthFirstTreeTraversal` only once. So that removes quite a few lines of code if your doing a bunch of tree traversals! Additionally, modifying the code is much easier because you only have to modify the business logic functions and not `depthFirstTreeTraversal`. 
 
-**Can I use this during a coding interview**? Absolutely! If you get a a coding question that requires the use of a well-defined algorithm like depth first traversal, then decoupling your code like this should increase your score with the interviewer! Just make sure you tell them why you are doing it. Now, you can almost definitely solve your coding problem without doing this. You might run out of time before you actually are able to refactor your code to be more decoupled. You can still get some points potentially if you quickly explain to your interview how you would decouple the code.
+**Can I use this during a coding interview**? Absolutely! If you get a coding question that requires the use of a well-defined algorithm like depth first traversal, then decoupling your code like this should increase your score with the interviewer! Just make sure you tell them why you are doing it. Now, you can definitely solve your coding problem without doing this. You might run out of time before you actually are able to refactor your code to be more decoupled. You can still get some points potentially if you quickly explain to your interview how you would decouple the code.
 
-**Is this code fully decoupled?** No. The algorithm in this case is still heavily constrained by the types `Node` and `Stack`. How would you decouple the algorithm from those types? Here are their definitions:
+**Is this code fully decoupled?** _No._ The algorithm in this case is still heavily constrained by the types `Node` and `Stack`. How would you decouple the algorithm from those types? This will be the subject of part 2 of this post. Here are their definitions:
 
 {% highlight go %}
 
