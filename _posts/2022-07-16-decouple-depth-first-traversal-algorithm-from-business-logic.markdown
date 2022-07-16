@@ -29,6 +29,7 @@ Consider the following Go function where we traverse a tree. Note that the `type
 In this example, all we do is traverse every node in the Tree and print its value. 
 
 {% highlight go %}
+
 func depthFirstTreeTraversalCoupled(root *Node) {
   stack := &Stack{}
   stack.Push(root)
@@ -45,11 +46,13 @@ func depthFirstTreeTraversalCoupled(root *Node) {
     }
   }
 }
+
 {% endhighlight %}
 
 We could replace the `fmt.Println(node.Value)` with fancier business logic like summing the node values. Let's do that.
 
 {% highlight go %}
+
 func depthFirstTreeTraversalCoupled(root *Node) {
   stack := &Stack{}
   stack.Push(root)
@@ -70,11 +73,13 @@ func depthFirstTreeTraversalCoupled(root *Node) {
 
   fmt.Println(sum)
 }
+
 {% endhighlight %}
 
 Unfortunately, we had to initialize the `sum` variable. Additionally, we had to "do something" with sum at the end so I added `fmt.Println(sum)` at the end. Alternatively, we could return the `sum` which would change the function to be as follows:
 
 {% highlight go %}
+
 func depthFirstTreeTraversalCoupled(root *Node) int {
   stack := &Stack{}
   stack.Push(root)
@@ -96,6 +101,7 @@ func depthFirstTreeTraversalCoupled(root *Node) int {
   fmt.Println(sum)
   return sum
 }
+
 {% endhighlight %}
 
 Great, so we've returned the `sum`! Actually, not so great. For one, the name `depthFirstTreeTraversalCoupled` no longer makes sense. It would be better named `sumTreeValues`. We can rename it to that, but what if our codebase still needs the original function? We would need to have two functions with very similar algorithms doing very different things.
@@ -130,6 +136,7 @@ func main() {
     fmt.Println(n.Value)
   })
 }
+
 {% endhighlight %}
 
 Alternatively, we could create a `printAllTreeValues` function like this:
@@ -141,6 +148,7 @@ func printAllTreeValues(tree *Node) {
     fmt.Println(n.Value)
   })
 }
+
 {% endhighlight %}
 
 If we want to do a sum, we do it as follows:
@@ -155,6 +163,7 @@ func main() {
 
   fmt.Println(sum)
 }
+
 {% endhighlight %}
 
 This also can be put into a function.
@@ -170,6 +179,7 @@ func sumAllTreeValues(tree *Node) int {
   fmt.Println(sum)
   return sum
 }
+
 {% endhighlight %}
 
 So why was all of this helpful? Because it allows us to write the `depthFirstTreeTraversal` only once. So that removes quite a few lines of code if your doing a bunch of tree traversals! Additionally, modifying the code is much easier because you only have to modify the business logic functions and not `depthFirstTreeTraversal`. 
@@ -211,3 +221,5 @@ func (stack *Stack) IsEmpty() bool {
 }
 
 {% endhighlight %}
+
+I hope you enjoyed reading!
